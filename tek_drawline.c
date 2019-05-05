@@ -114,6 +114,7 @@ void alphablend(int x, int y, float alpha, float r, float g, float b) {
         else {
             p[0] = (unsigned char)(p[0] * (1 - alpha) + r * alpha * 255);
             p[2] = (unsigned char)(p[2] * (1 - alpha) + b * alpha * 255);
+            p[3] = 0;
         }
     }
 }
