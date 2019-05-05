@@ -14,16 +14,16 @@ xmlns="http://www.w3.org/TR/REC-html40">
  <o:DocumentProperties>
   <o:Author>Ian Schofield</o:Author>
   <o:LastAuthor>Ian Schofield</o:LastAuthor>
-  <o:Revision>9</o:Revision>
-  <o:TotalTime>72</o:TotalTime>
+  <o:Revision>11</o:Revision>
+  <o:TotalTime>73</o:TotalTime>
   <o:Created>2019-05-05T15:05:00Z</o:Created>
-  <o:LastSaved>2019-05-05T17:21:00Z</o:LastSaved>
+  <o:LastSaved>2019-05-05T21:22:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>446</o:Words>
-  <o:Characters>2544</o:Characters>
+  <o:Words>460</o:Words>
+  <o:Characters>2623</o:Characters>
   <o:Lines>21</o:Lines>
-  <o:Paragraphs>5</o:Paragraphs>
-  <o:CharactersWithSpaces>2985</o:CharactersWithSpaces>
+  <o:Paragraphs>6</o:Paragraphs>
+  <o:CharactersWithSpaces>3077</o:CharactersWithSpaces>
   <o:Version>12.00</o:Version>
  </o:DocumentProperties>
 </xml><![endif]-->
@@ -416,7 +416,8 @@ h3
 	mso-fareast-font-family:"Times New Roman";
 	font-weight:bold;}
 a:link, span.MsoHyperlink
-	{mso-style-priority:99;
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
 	color:blue;
 	mso-themecolor:hyperlink;
 	text-decoration:underline;
@@ -722,7 +723,7 @@ ul
 	mso-fareast-language:EN-US;}
 </style>
 <![endif]--><!--[if gte mso 9]><xml>
- <o:shapedefaults v:ext="edit" spidmax="5122"/>
+ <o:shapedefaults v:ext="edit" spidmax="6146"/>
 </xml><![endif]--><!--[if gte mso 9]><xml>
  <o:shapelayout v:ext="edit">
   <o:idmap v:ext="edit" data="1"/>
@@ -758,23 +759,24 @@ View <span class=SpellE>Bistable</span> Storage Tube (DVBST) terminal. This
 remarkable device was manufactured by Tektronix inc. <span class=GramE>Until
 1985.</span> There are not many functioning system still in existence, most
 being in computer museums. This application is intended to provide a reasonable
-facsimile of the display on these devices. See: https://en.wikipedia.org/wiki/Tektronix_4010.<o:p></o:p></span></p>
+facsimile of the display on these devices. See:
+https://en.wikipedia.org/wiki/Tektronix_4010.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:3.95pt;line-height:normal;background:
 white'><span style='font-size:4.0pt;font-family:"Segoe UI","sans-serif";
 mso-fareast-font-family:"Times New Roman";color:#24292E;mso-fareast-language:
 EN-GB'>The emulator is based upon SDL2 for graphics services. To achieve a
 convincing display, the basic window size has been increased from 1024x780, the
-native resolution of the 4010 terminal by a factor of 1.5 to 1536x 1170. This increase
-permits a degree of <span class=SpellE>antialising</span> to give the
+native resolution of the 4010 terminal by a factor of 1.5 to 1536x 1170. This
+increase permits a degree of <span class=SpellE>antialising</span> to give the
 appearance close to that of the original. I would note that the actual hardware
 resolution of the 4014 (and later systems) is 4096x3120 using 12 bit DACs to
 drive the CRT display. This resolution has only recently become available in
 the digital domain at a ‘reasonable’ price. However, the dot size on a storage
-display is much larger than that required for 12 bits of resolution due to ‘bleed’
-of the charge pattern on the storage plate. In general, these terminals tended
-to be configured with a degree of defocusing as at the time, users were not
-quite used to the idea of pixilation. To this end, the emulated display is
+display is much larger than that required for 12 bits of resolution due to
+‘bleed’ of the charge pattern on the storage plate. In general, these terminals
+tended to be configured with a degree of defocusing as at the time, users were
+not quite used to the idea of pixilation. To this end, the emulated display is
 scaled as above and the <span class=SpellE>antialising</span> configured to
 blur the individual pixels. This does mean that the display will not fit on a
 cheap 1080p monitor and due to the <span class=SpellE>antialiasing</span>, a
@@ -794,8 +796,8 @@ EN-GB'>Specifically:<span style='mso-spacerun:yes'>  </span><span
 style='mso-tab-count:1'>                     </span>Graphic in is not
 implemented but the cursors appear and moves on mouse down in the window.<br>
 <span style='mso-tab-count:1'>                                                </span>Smaller
-fonts cannot be selected. This will require further thought as to the best presentation
-without excessive pixilation.<br>
+fonts cannot be selected. This will require further thought as to the best
+presentation without excessive pixilation.<br>
 <span style='mso-tab-count:1'>                                                </span>Variable
 luminance graphics is not supported.<o:p></o:p></span></p>
 
@@ -831,7 +833,7 @@ class=SpellE>sudo</span> apt-get <span class=GramE>install</span> libsdl2-dev
 auto;text-indent:-18.0pt;line-height:normal;mso-list:l0 level1 lfo2;background:
 white'><![if !supportLists]><span style='font-size:4.0pt;font-family:"Segoe UI","sans-serif";
 mso-fareast-font-family:"Segoe UI";color:#24292E;mso-fareast-language:EN-GB'><span
-style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span style='font-size:4.0pt;font-family:"Segoe UI","sans-serif";
 mso-fareast-font-family:"Times New Roman";color:#24292E;mso-fareast-language:
 EN-GB'>OSX: -<span style='mso-spacerun:yes'>  </span><span style='mso-tab-count:
@@ -842,7 +844,7 @@ included <span class=SpellE>makefile</span>.<o:p></o:p></span></p>
 auto;text-indent:-18.0pt;line-height:normal;mso-list:l0 level1 lfo2;background:
 white'><![if !supportLists]><span style='font-size:4.0pt;font-family:"Segoe UI","sans-serif";
 mso-fareast-font-family:"Segoe UI";color:#24292E;mso-fareast-language:EN-GB'><span
-style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span style='font-size:4.0pt;font-family:"Segoe UI","sans-serif";
 mso-fareast-font-family:"Times New Roman";color:#24292E;mso-fareast-language:
 EN-GB'>Win32: -<span style='mso-tab-count:1'>                             </span>The
@@ -880,6 +882,14 @@ white'><span style='font-size:4.0pt;font-family:"Segoe UI","sans-serif";
 mso-fareast-font-family:"Times New Roman";color:#24292E;mso-fareast-language:
 EN-GB'><span style='mso-spacerun:yes'>   </span>tek40xx &lt;hostname or IP
 address&gt; [&lt;port&gt; default<span class=GramE>:23</span>]<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:3.95pt;line-height:normal;background:
+white'><span style='font-size:4.0pt;font-family:"Segoe UI","sans-serif";
+mso-fareast-font-family:"Times New Roman";color:#24292E;mso-fareast-language:
+EN-GB'><span style='mso-spacerun:yes'>  </span>Useful ‘magic’ keys: <span
+style='mso-tab-count:1'>    </span>HOME: Erase screen.<span style='mso-tab-count:
+1'>                                                 </span>END: Close
+connection and terminate application.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-top:5.9pt;margin-right:0cm;margin-bottom:3.95pt;
 margin-left:0cm;line-height:normal;mso-outline-level:3;background:white'><b><span
