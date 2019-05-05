@@ -14,16 +14,16 @@ xmlns="http://www.w3.org/TR/REC-html40">
  <o:DocumentProperties>
   <o:Author>Ian Schofield</o:Author>
   <o:LastAuthor>Ian Schofield</o:LastAuthor>
-  <o:Revision>5</o:Revision>
+  <o:Revision>7</o:Revision>
   <o:TotalTime>29</o:TotalTime>
   <o:Created>2019-05-05T15:05:00Z</o:Created>
-  <o:LastSaved>2019-05-05T15:35:00Z</o:LastSaved>
+  <o:LastSaved>2019-05-05T16:03:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>152</o:Words>
-  <o:Characters>867</o:Characters>
+  <o:Words>149</o:Words>
+  <o:Characters>853</o:Characters>
   <o:Lines>7</o:Lines>
-  <o:Paragraphs>2</o:Paragraphs>
-  <o:CharactersWithSpaces>1017</o:CharactersWithSpaces>
+  <o:Paragraphs>1</o:Paragraphs>
+  <o:CharactersWithSpaces>1001</o:CharactersWithSpaces>
   <o:Version>12.00</o:Version>
  </o:DocumentProperties>
 </xml><![endif]-->
@@ -709,7 +709,7 @@ ul
 	mso-fareast-language:EN-US;}
 </style>
 <![endif]--><!--[if gte mso 9]><xml>
- <o:shapedefaults v:ext="edit" spidmax="3074"/>
+ <o:shapedefaults v:ext="edit" spidmax="4098"/>
 </xml><![endif]--><!--[if gte mso 9]><xml>
  <o:shapelayout v:ext="edit">
   <o:idmap v:ext="edit" data="1"/>
@@ -829,17 +829,6 @@ white'><span style='font-size:4.0pt;font-family:"Segoe UI","sans-serif";
 mso-fareast-font-family:"Times New Roman";color:#24292E;mso-fareast-language:
 EN-GB'><span style='mso-spacerun:yes'>   </span>tek40xx &lt;hostname or IP
 address&gt; [&lt;port&gt; default<span class=GramE>:23</span>]<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:3.95pt;line-height:normal;background:
-white'><span style='font-size:4.0pt;font-family:"Segoe UI","sans-serif";
-mso-fareast-font-family:"Times New Roman";color:#24292E;mso-fareast-language:
-EN-GB'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='margin-top:5.9pt;margin-right:0cm;margin-bottom:3.95pt;
-margin-left:0cm;line-height:normal;mso-outline-level:3;background:white'><b><span
-style='font-size:12.0pt;mso-bidi-font-size:15.0pt;font-family:"Segoe UI","sans-serif";
-mso-fareast-font-family:"Times New Roman";color:#24292E;mso-fareast-language:
-EN-GB'>The application<o:p></o:p></span></b></p>
 
 <p class=MsoNormal style='margin-bottom:3.95pt;line-height:normal;background:
 white'><span style='font-size:4.0pt;font-family:"Segoe UI","sans-serif";
