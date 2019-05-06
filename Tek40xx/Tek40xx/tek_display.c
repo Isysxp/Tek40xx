@@ -136,11 +136,11 @@ int tek_get()                // Fetch char from the input stream or tline
 
 void tek_draw_char(char ch)
 {
-    int x , y=cy1, i, j, ndx=(ch & 0x7f) * 5;
+    int x , y, i, j, ndx=(ch & 0x7f) * 5;
     int k,l;
 
-    for (i=0,x=cx1; i<5; i++,x+=3)
-        for (j=0,y=cy1; j<8; j++,y+=3)
+    for (i=0,x=cx1*1.5; i<5; i++,x+=3)
+        for (j=0,y=cy1*1.5; j<8; j++,y+=3)
             if (FONT_BIT(ndx,i,j))
                 for (k=0; k<3; k++)
                     for (l=0; l<3; l++)
@@ -176,7 +176,7 @@ void tek_erase()
     vid_erase_win();          // Erase screen
     lo = 230;                  // Initial flash and fade to 230
     save_x = xcol = cx1 = 0;
-    save_y = cy1 = WINDOW_HEIGHT - step_y;
+    save_y = cy1 = REAL_HEIGHT - step_y;
     tekstate = ALPHA;
     sppz = pplt = 0;
     clrflag = 0;            // Screen cleared 
@@ -189,10 +189,10 @@ int main(int argc, char* argv[])        // Local initialisation
 {
     int port = 23;
 
-    step_x  = WINDOW_WIDTH / 80;
-    step_y  = WINDOW_HEIGHT / 35;
+    step_x  = REAL_WIDTH / 80;
+    step_y  = REAL_HEIGHT / 35;
     cx1 = xcol = 0;
-    cy1 = WINDOW_HEIGHT - step_y;            /* home position in screen units (tekpoints) */
+    cy1 = REAL_HEIGHT - step_y;            /* home position in screen units (tekpoints) */
     lststate = tekstate = ALPHA;
     wrthru = GINon = 0;
     setlinetype(SOLID);
@@ -220,9 +220,9 @@ void tek_newline()
     cy1 -= step_y;
     if (cy1 < step_y/2)
     {
-        cy1 = WINDOW_HEIGHT - step_y;
+        cy1 = REAL_HEIGHT - step_y;
         if (xcol) xcol = 0;
-        else xcol = WINDOW_WIDTH / 2;
+        else xcol = REAL_WIDTH / 2;
     }
     cx1 = xcol;
 }
@@ -288,7 +288,7 @@ void tek_draw()
                     if (cy1 < 8) cy1 = 8;
                     tek_draw_char(ch);
                     cx1 += step_x;
-                    if (cx1 > WINDOW_WIDTH)
+                    if (cx1 > REAL_WIDTH)
                         tek_newline();
                 }
                 break;

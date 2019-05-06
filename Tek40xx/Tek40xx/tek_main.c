@@ -443,16 +443,18 @@ extern enum TekState tekstate;
 int vid_setcursor(uint32 mode)
 {
     int ix,iy;
+    int syl = (int)(cy1*1.5);
+    int sxl = (int)(cx1*1.5);
 
-    if ((unsigned int)cy1 + 14 > init_h || tekstate != ALPHA || wrthru)
+    if ((unsigned int)syl + 14 > init_h || tekstate != ALPHA || wrthru)
         return 1;
 
     for (ix=0;ix<10;ix+=2)
         for (iy=0;iy<14;iy+=2)
             if (mode)
-                vid_setpixel(cx1+ix, init_h - cy1 - iy -1, 7, 0xa000);
+                vid_setpixel(sxl+ix, init_h - syl - iy -1, 7, 0xa000);
             else
-                vid_setpixel(cx1+ix, init_h - cy1 - iy - 1, 7, 0x2000);
+                vid_setpixel(sxl+ix, init_h - syl - iy - 1, 7, 0x2000);
     return 0;
 }
 /*

@@ -67,6 +67,7 @@ typedef struct key_event SIM_KEY_EVENT;
 #define WINDOW_WIDTH 1536
 #define WINDOW_HEIGHT 1170
 #define REAL_HEIGHT 780
+#define REAL_WIDTH 1024
 
 #define SIM_VID_INPUTCAPTURED       1                       /* Mouse and Keyboard input captured (calling */
 enum LineType {SOLID,DOTTED,DOTDASH,SHORTDASH,LONGDASH};
