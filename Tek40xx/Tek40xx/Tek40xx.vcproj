@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="./;&quot;../../windows-build/PCRE/include/&quot;;../;&quot;../../windows-build/libSDL/SDL2-2.0.3/include&quot;;&quot;C:\Users\iansc\Documents\Visual Studio 2008\Projects\windows-build\libSDL\SDL2-2.0.3\include&quot;;&quot;../../windows-build/pthreads&quot;"
+				AdditionalIncludeDirectories="./;../;&quot;../../windows-build/libSDL/SDL2-2.0.3/include/&quot;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE;_CRT_NONSTDC_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;SIM_NEED_GIT_COMMIT_ID;PIX_SIZE=2;PDP8;PCRE_STATIC;HAVE_LIBSDL;USE_SIM_VIDEO;USE_DISPLAY"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
