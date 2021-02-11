@@ -102,6 +102,13 @@ void usleep(unsigned int usec)
     WaitForSingleObject(timer, INFINITE);
     CloseHandle(timer);
 }
+
+FILE* __cdecl __iob_func(void)
+{
+	FILE _iob[] = { *stdin, *stdout, *stderr };
+	return _iob;
+}
+
 #endif
 
 static int main_argc;

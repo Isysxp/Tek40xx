@@ -1,0 +1,16 @@
+﻿cl : Command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  tek_telnet.c
+  tek_main.c
+c:\users\iansc\source\repos\tek40xx\tek40xx\tek40xx\tek_main.c(360): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
+  tek_drawline.c
+c:\users\iansc\source\repos\tek40xx\tek40xx\tek40xx\tek_drawline.c(170): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\iansc\source\repos\tek40xx\tek40xx\tek40xx\tek_drawline.c(171): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  tek_display.c
+c:\users\iansc\source\repos\tek40xx\tek40xx\tek40xx\tek_display.c(142): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\iansc\source\repos\tek40xx\tek40xx\tek40xx\tek_display.c(143): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  font-5x7.c
+  Generating Code...
+c:\users\iansc\source\repos\tek40xx\tek40xx\tek40xx\tek_main.c(109): warning C4172: returning address of local variable or temporary: _iob
+font-5x7.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+     Creating library C:\Users\iansc\source\repos\Tek40xx\Tek40xx\Debug\Tek40xx.lib and object C:\Users\iansc\source\repos\Tek40xx\Tek40xx\Debug\Tek40xx.exp
+  Tek40xx.vcxproj -> C:\Users\iansc\source\repos\Tek40xx\Tek40xx\Debug\Tek40xx.exe

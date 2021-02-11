@@ -218,7 +218,7 @@ int main(int argc, char* argv[])        // Local initialisation
 void tek_newline()
 {
     cy1 -= step_y;
-    if (cy1 < step_y/2)
+    if (cy1 < 0)
     {
         cy1 = REAL_HEIGHT - step_y;
         if (xcol) xcol = 0;
