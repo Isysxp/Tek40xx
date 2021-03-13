@@ -52,7 +52,7 @@ extern void usleep(unsigned int usec);
 #define FONT_BIT(c, column, row) \
     ((font_data[(c)+(column)] & 1<<(7-(row))) != 0)
 
-int pxptn[]={0x6c,0x6c,0x6c,0x8c,0xfc,0x8c,0x6c,0x8c,0x6c};
+int pxptn[]={0x4c,0x6c,0x4c,0x8c,0xfc,0x8c,0x4c,0x6c,0x4c};
 
 void tek_draw();
 
@@ -139,7 +139,7 @@ void tek_draw_char(char ch)
     int x , y, i, j, ndx=(ch & 0x7f) * 5;
     int k,l;
 
-    for (i=0,x=cx1*1.5; i<5; i++,x+=3)
+    for (i=0,x=cx1*1.5 + 3; i<5; i++,x+=3)
         for (j=0,y=cy1*1.5; j<8; j++,y+=3)
             if (FONT_BIT(ndx,i,j))
                 for (k=0; k<3; k++)
