@@ -4,3 +4,11 @@
 
 /.vs
 /windows-build
+Tek40xx/.vs/Tek40xx/v16/.suo
+Tek40xx/.vs/Tek40xx/v16/.suo
+Tek40xx/.vs/Tek40xx/v16/Browse.VC.db
+Tek40xx/.vs/Tek40xx/v16/ipch/AutoPCH/1e1acc4913d3d268/TEK_MAIN.ipch
+Tek40xx/Debug/Tek40xx.ilk
+*.idb
+*.pdb
+*.vcxproj
