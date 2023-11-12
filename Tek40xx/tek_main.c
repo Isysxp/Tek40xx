@@ -87,6 +87,7 @@ static int Refresh(void *info);
 static int MLoop();
 static void vid_close_window(void);
 void vid_beep (void);
+int tek_socket;
 
 
 static SDL_Window *window = 0;                    // Declare some pointers

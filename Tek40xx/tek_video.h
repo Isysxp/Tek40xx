@@ -100,7 +100,7 @@ void PlotPoint(int x, int y);
 void NewLinesAlpha(int x1,int y1,int x2,int y2);
 void tek_erase();
 int telnet(char *hostname, int port);
-int tek_socket;
+extern int tek_socket;
 extern uint32 vid_mono_palette[2];
 extern int alias;
 void vid_set_cursor_position (int32 x, int32 y);        /* cursor position (set by calling code) */
