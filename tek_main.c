@@ -26,6 +26,7 @@ in this Software without prior written authorization from the author.
 */
 
 
+
 #include <stdio.h>
 #include "tek_video.h"
 #include <math.h>
@@ -37,9 +38,14 @@ typedef unsigned char CHAR;
 #include <unistd.h>
 #endif
 
+
 #if defined (main)                                  /* Required for SDL */
 #undef main
 #endif
+
+FILE __iob_func[3] = { NULL, NULL, NULL };
+//FILE _iob[] = { NULL,NULL,NULL };
+//extern FILE * __cdecl __iob_func(void) { return _iob; }
 
 // Global video system flgs/variables
 
@@ -50,7 +56,7 @@ int nostore=0;							            /* Enables storage display. Always defined. */
 int alias;                                          /* Aliasing active flag. Required to set correct pixel intensity */
 int toclose = 0;                                    /* Flag used in tek_display to terminate thread */
 
-struct phosphor p29 = {{0.0,0.8,0.0},0xff00};       // P29 phosphor
+struct phosphor p29 = {{0.0,0.9,0.0},0xff00};       // P29 phosphor
 struct phosphor p6 = {{0.75,0.8,0.75},0xffffff};      // White phosphor
 
 char bfr[128];
@@ -86,7 +92,10 @@ void vid_beep (void);
 static SDL_Window *window = 0;                    // Declare some pointers
 SDL_Surface *surface = 0;
 static SDL_Cursor *cursor = 0;
-
+Uint32 render_flags = SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC;
+SDL_Texture* tex;
+// creates a renderer to render our images
+SDL_Renderer* rend;
 int32 vid_flags;                                        /* Open Flags */
 
 #ifdef _WIN32
@@ -102,13 +111,6 @@ void usleep(unsigned int usec)
     WaitForSingleObject(timer, INFINITE);
     CloseHandle(timer);
 }
-
-FILE* __cdecl __iob_func(void)
-{
-	FILE _iob[] = { *stdin, *stdout, *stderr };
-	return _iob;
-}
-
 #endif
 
 static int main_argc;
@@ -139,6 +141,8 @@ int main (int argc, char *argv[])
         exit(-1);
     }
 
+	//HWND hwnd = GetConsoleWindow();
+	//ShowWindow(hwnd, 0);
 
     vid_main_thread_handle = SDL_CreateThread (main_thread , "tek-main", NULL);
 
@@ -150,6 +154,13 @@ int main (int argc, char *argv[])
     vid_close();
     SDL_Quit();
     return status;
+}
+
+void UpdateWindowSurface()
+{
+    SDL_UpdateTexture(tex, NULL, surface->pixels, surface->pitch);
+    SDL_RenderCopy(rend, tex, NULL, NULL);
+    SDL_RenderPresent(rend);
 }
 
 t_stat vid_close (void)
@@ -260,6 +271,7 @@ t_stat vid_create_window(void)
         exit(-1);
     }
     surface = SDL_GetWindowSurface(window);
+    //surface = SDL_CreateRGBSurfaceWithFormat(0, init_w, init_h, 32, SDL_PIXELFORMAT_RGB888);
     /* Check the bitdepth of the surface */
     if(surface->format->BitsPerPixel != 32)
     {
@@ -272,10 +284,22 @@ t_stat vid_create_window(void)
         fprintf(stderr, "Invalid pixel format.\n");
         exit(-1);
     }
+
+    rend = SDL_GetRenderer(window);
+    if (rend)
+        SDL_DestroyRenderer(rend);
+    SDL_SetHint(SDL_HINT_RENDER_VSYNC, "1");
+    rend = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    if (!rend)
+        printf("%s\r\n", SDL_GetError());
+    tex = SDL_CreateTextureFromSurface(rend, surface);
+    if (!tex)
+        printf("%s\r\n", SDL_GetError());
+
+
     //SDL_ConvertSurfaceFormat(surface, SDL_PIXELFORMAT_ARGB8888, 0);
     pixels = (unsigned char *)surface->pixels;
     surlen = (init_h * surface->pitch);
-    SDL_UpdateWindowSurface(window);
     SDL_CreateThread(Refresh,"Refresh",(void *)NULL);                                                            /* for all other system that use their own cursor (see sim_ws.c:vid_open) */
     vid_init = RUNNING;									    /* Init OK continue to next state */
 
@@ -450,18 +474,16 @@ extern enum TekState tekstate;
 int vid_setcursor(uint32 mode)
 {
     int ix,iy;
-    int syl = (int)(cy1*1.5);
-    int sxl = (int)(cx1*1.5);
 
-    if ((unsigned int)syl + 14 > init_h || tekstate != ALPHA || wrthru)
+    if ((unsigned int)cy1*1.5 + 14 > init_h || tekstate != ALPHA || wrthru)
         return 1;
 
     for (ix=0;ix<10;ix+=2)
         for (iy=0;iy<14;iy+=2)
             if (mode)
-                vid_setpixel(sxl+ix, init_h - syl - iy -1, 7, 0xa000);
+                vid_setpixel(cx1*1.5+ix, init_h - cy1*1.5 - iy -1, 7, 0xa000);
             else
-                vid_setpixel(sxl+ix, init_h - syl - iy - 1, 7, 0x2000);
+                vid_setpixel(cx1*1.5+ix, init_h - cy1*1.5 - iy - 1, 7, 0x2000);
     return 0;
 }
 /*
@@ -501,7 +523,7 @@ static int Refresh(void *info)
                 vid_setcursor(mode);
                 mode = !mode;
                 ccntr = 4;
-                SDL_UpdateWindowSurface(window);				// Write the surface to the host system window
+                UpdateWindowSurface();				// Write the surface to the host system window
             }
 
 
@@ -523,8 +545,9 @@ static int Refresh(void *info)
         if (update + nostore == 0) {
             nostore++;
             upflag = 0;
-        } else
-            SDL_UpdateWindowSurface(window);				// Write the surface to the host system window
+        }
+        else
+            UpdateWindowSurface();				// Write the surface to the host system window
 
         tnew = SDL_GetTicks();
         tvl = 20 - tnew + told;				// Calculate delay required for a constant update time of 20mSec.
