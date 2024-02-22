@@ -510,7 +510,7 @@ static int Refresh(void *info)
     uint32 *z;
     double *d;
     unsigned char lox[]= {2,0,0};                               // Lo limit of decay for R/G/B (Blue is color key for GIN cursor)
-    unsigned char lon[]= {2,BACKGROUND,0};                      // Setting for writethrough
+    unsigned char lon[]= {2,BACKGROUND+4,0};                      // Setting for writethrough
     register int update = 0;                                    // This is a flag to indiacte that a refresh is no required
 
 
