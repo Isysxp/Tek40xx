@@ -179,7 +179,8 @@ void tek_erase()
     save_y = cy1 = REAL_HEIGHT - step_y;
     tekstate = ALPHA;
     sppz = pplt = 0;
-    clrflag = 0;            // Screen cleared 
+    clrflag = 0;            // Screen cleared
+     setlinetype(SOLID);
 }
 
 
