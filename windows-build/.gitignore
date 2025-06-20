@@ -1,7 +1,6 @@
 #Ignore files built by Visual Studio
 *.obj
 *.dll
-*.lib
 *.exe
 *.pdb
 *.user
