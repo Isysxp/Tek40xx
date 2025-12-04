@@ -88,7 +88,7 @@ t_stat vid_setpixel(int ix,int iy,int level,uint32 color);
 uint32 vid_getpixel(int ix,int iy);
 t_stat vid_erase_win();
 void vid_drawline( int pX1, int pY1, int pX2, int pY2);
-int vid_setcursor();
+int vid_setcursor(uint32 mode);
 void vid_update_screen();
 void save_state(enum TekState state);
 int vid_map_key (int key);
