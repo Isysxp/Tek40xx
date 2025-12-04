@@ -1097,9 +1097,9 @@ increase permits a degree of <span class=SpellE>antialising</span> to give the
 appearance close to that of the original. I would note that the actual hardware
 resolution of the 4014 (and later systems) is 4096x3120 using 12 bit DACs to
 drive the CRT display. This resolution has only recently become available in
-the digital domain at a ‘reasonable’ price. However, the dot size on a storage
+the digital domain at a Â‘reasonableÂ’ price. However, the dot size on a storage
 display is much larger than that required for 12 bits of resolution due to
-‘bleed’ of the charge pattern on the storage plate. In general, these terminals
+Â‘bleedÂ’ of the charge pattern on the storage plate. In general, these terminals
 tended to be configured with a degree of defocusing as at the time, users were
 not quite used to the idea of pixilation. To this end, the emulated display is
 scaled as above and the <span class=SpellE>antialising</span> configured to
@@ -1117,19 +1117,19 @@ are not quite functional as yet.<o:p></o:p></span></p>
 <p class=MsoNormal style='margin-bottom:3.95pt;line-height:normal;background:
 white'><span style='font-size:4.0pt;font-family:"Segoe UI",sans-serif;
 mso-fareast-font-family:"Times New Roman";color:#24292E;mso-fareast-language:
-EN-GB'>Specifically:<span style='mso-spacerun:yes'>  </span><span
-style='mso-tab-count:1'>             </span>Graphic in is not implemented but
+EN-GB'>Specifically:<span style='mso-spacerun:yes'>Â  </span><span
+style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â  </span>Graphic in is not implemented but
 the cursors appear and moves on mouse down in the window.<br>
-<span style='mso-tab-count:1'>                                    </span>Smaller
+<span style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>Smaller
 fonts cannot be selected. This will require further thought as to the best
 presentation without excessive pixilation.<br>
-<span style='mso-tab-count:1'>                                    </span>Variable
+<span style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>Variable
 luminance graphics is not supported.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:3.95pt;line-height:normal;background:
 white'><span style='font-size:4.0pt;font-family:"Segoe UI",sans-serif;
 mso-fareast-font-family:"Times New Roman";color:#24292E;mso-fareast-language:
-EN-GB'>Try ’<span class=SpellE>gnuplot</span> GnuPlotTest.txt’ on your target
+EN-GB'>Try Â’<span class=SpellE>gnuplot</span> GnuPlotTest.txtÂ’ on your target
 system..... And, there are many example files on the web.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-top:5.9pt;margin-right:0cm;margin-bottom:3.95pt;
@@ -1150,7 +1150,7 @@ mso-fareast-font-family:"Segoe UI";color:#24292E;mso-fareast-language:EN-GB'><sp
 style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span style='font-size:4.0pt;font-family:"Segoe UI",sans-serif;
 mso-fareast-font-family:"Times New Roman";color:#24292E;mso-fareast-language:
-EN-GB'>Linux: - <span style='mso-tab-count:1'>                      </span><span
+EN-GB'>Linux: - <span style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span><span
 class=SpellE>sudo</span> apt-get install libsdl2-dev (or equivalent). Build
 using the included <span class=SpellE>makefile</span>.<o:p></o:p></span></p>
 
@@ -1161,8 +1161,8 @@ mso-fareast-font-family:"Segoe UI";color:#24292E;mso-fareast-language:EN-GB'><sp
 style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span style='font-size:4.0pt;font-family:"Segoe UI",sans-serif;
 mso-fareast-font-family:"Times New Roman";color:#24292E;mso-fareast-language:
-EN-GB'>OSX: -<span style='mso-spacerun:yes'>  </span><span style='mso-tab-count:
-1'>                       </span>brew install sdl2. Build using the included <span
+EN-GB'>OSX: -<span style='mso-spacerun:yes'>Â  </span><span style='mso-tab-count:
+1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>brew install sdl2. Build using the included <span
 class=SpellE>makefile</span>.<o:p></o:p></span></p>
 
 <p class=MsoListParagraphCxSpLast style='margin-bottom:3.95pt;mso-add-space:
@@ -1172,10 +1172,10 @@ mso-fareast-font-family:"Segoe UI";color:#24292E;mso-fareast-language:EN-GB'><sp
 style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span style='font-size:4.0pt;font-family:"Segoe UI",sans-serif;
 mso-fareast-font-family:"Times New Roman";color:#24292E;mso-fareast-language:
-EN-GB'>Win32: -<span style='mso-tab-count:1'>                      </span>The
-‘windows-build’ directory contains all of the required (SDL2) components. Build
+EN-GB'>Win32: -<span style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>The
+Â‘windows-buildÂ’ directory contains all of the required (SDL2) components. Build
 using Visual Studio 2008 or later.<br>
-<span style='mso-tab-count:1'>                                    </span>Open
+<span style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>Open
 the included Tek40xx.sln file in the Tek40xx directory.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-top:5.9pt;margin-right:0cm;margin-bottom:3.95pt;
@@ -1187,33 +1187,33 @@ EN-GB'>Using the application<o:p></o:p></span></b></p>
 <p class=MsoNormal style='margin-bottom:3.95pt;line-height:normal;background:
 white'><span style='font-size:4.0pt;font-family:"Segoe UI",sans-serif;
 mso-fareast-font-family:"Times New Roman";color:#24292E;mso-fareast-language:
-EN-GB'><span style='mso-spacerun:yes'>  </span>The application executable name
+EN-GB'><span style='mso-spacerun:yes'>Â  </span>The application executable name
 is tek40xx. This refers to the device name used by <span class=SpellE>GNUPlot</span>
 to create graphic code for these terminals.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:3.95pt;line-height:normal;background:
 white'><span style='font-size:4.0pt;font-family:"Segoe UI",sans-serif;
 mso-fareast-font-family:"Times New Roman";color:#24292E;mso-fareast-language:
-EN-GB'><span style='mso-spacerun:yes'>  </span>Tek40xx is a simple telnet
+EN-GB'><span style='mso-spacerun:yes'>Â  </span>Tek40xx is a simple telnet
 client:<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:3.95pt;line-height:normal;background:
 white'><span style='font-size:4.0pt;font-family:"Segoe UI",sans-serif;
 mso-fareast-font-family:"Times New Roman";color:#24292E;mso-fareast-language:
-EN-GB'><span style='mso-spacerun:yes'>   </span>Usage:<o:p></o:p></span></p>
+EN-GB'><span style='mso-spacerun:yes'>Â Â  </span>Usage:<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:3.95pt;line-height:normal;background:
 white'><span style='font-size:4.0pt;font-family:"Segoe UI",sans-serif;
 mso-fareast-font-family:"Times New Roman";color:#24292E;mso-fareast-language:
-EN-GB'><span style='mso-spacerun:yes'>   </span>tek40xx &lt;hostname or IP
+EN-GB'><span style='mso-spacerun:yes'>Â Â  </span>tek40xx &lt;hostname or IP
 address&gt; [&lt;port&gt; default:23]<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:3.95pt;line-height:normal;background:
 white'><span style='font-size:4.0pt;font-family:"Segoe UI",sans-serif;
 mso-fareast-font-family:"Times New Roman";color:#24292E;mso-fareast-language:
-EN-GB'><span style='mso-spacerun:yes'>  </span>Useful ‘magic’ keys: <span
-style='mso-tab-count:1'>                                  </span>HOME: Erase
-screen.<span style='mso-tab-count:1'>                                    </span>END:
+EN-GB'><span style='mso-spacerun:yes'>Â  </span>Useful Â‘magicÂ’ keys: <span
+style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>HOME: Erase
+screen.<span style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>END:
 Close connection and terminate application.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-top:5.9pt;margin-right:0cm;margin-bottom:3.95pt;
@@ -1282,6 +1282,12 @@ mso-fareast-font-family:"Times New Roman";color:#24292E;mso-fareast-language:
 EN-GB'><o:p>&nbsp;</o:p></span></p>
 
 </div>
+
+Update June 2025:<br>
+<br>
+I have just added all of the missing files required for a windows build and set the paths correctly.
+This all came about by using Visual Studio as the build environment.<br>
+<br>
 
 </body>
 

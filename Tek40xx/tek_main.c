@@ -43,7 +43,7 @@ typedef unsigned char CHAR;
 #undef main
 #endif
 
-FILE __iob_func[3] = { NULL, NULL, NULL };
+FILE __iob_func[3] = {{ 0, 0, 0 }};
 //FILE _iob[] = { NULL,NULL,NULL };
 //extern FILE * __cdecl __iob_func(void) { return _iob; }
 
