@@ -1288,6 +1288,15 @@ Update June 2025:<br>
 I have just added all of the missing files required for a windows build and set the paths correctly.
 This all came about by using Visual Studio as the build environment.<br>
 <br>
+<br>
+Update Dec 2025:<br>
+<br>
+ Having merged in some changes from Stefan to correct compile errors, I have re-checked the app for compatibilty with Debian Bookworm.<br>
+ Needless to say it does not work and results in a blank SDL window! However, I already have a fix to hand which has now been included.<br>
+ For those interested to know, SDL window updates must run on the SDL main thread. See MLoop() in tek_main.c which now uses a flag<br>
+ rather than calling RenderPresent in the off thread code when the screen content has been changed.<br>
+ This is part of app maintenence which (I'm afraid) includes repo chasing!<br>
+<br>
 
 </body>
 
